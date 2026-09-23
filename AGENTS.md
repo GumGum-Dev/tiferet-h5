@@ -7,7 +7,7 @@
 - **Repository:** https://github.com/greatstrength/tiferet-h5
 - **Branch:** `v1.x-proto`
 - **Python:** ≥ 3.10
-- **Version:** `1.0.0b1` -- **API frozen.** The public surface as of `1.0.0a8` (all of RFP-001 through RFP-007) is locked; only bug fixes land between now and `1.0.0`. See `CHANGELOG.md` for what each prior alpha shipped.
+- **Version:** `1.0.0b2`. The `1.0.0a8` cluster (RFP-001 through RFP-007) remains frozen as history. This beta extends the prototype catalog with RFP-008 and RFP-009. See `CHANGELOG.md`.
 - **Dependencies:** `tiferet >= 2.0.3, < 2.1`, `tables >= 3.10.0`
 
 ## Architecture

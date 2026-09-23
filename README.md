@@ -12,7 +12,7 @@ HDF5 infrastructure extension for the [Tiferet](https://github.com/greatstrength
 
 ## Release Status
 
-`tiferet-h5` is at `1.0.0b1` -- a release candidate with the public API frozen as of `1.0.0a8`. Only bug fixes land between now and the `1.0.0` general-availability release; no new features or breaking changes are expected. See [CHANGELOG.md](CHANGELOG.md) for the full history of what each alpha shipped.
+`tiferet-h5` is at `1.0.0b2`. The `1.0.0a8` cluster remains frozen as history; this beta extends the prototype catalog with the null-sentinel convention and missing-file repository reads. See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 ## Async Usage
 

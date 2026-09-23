@@ -5,6 +5,17 @@ follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); the
 version sequence follows this project's own alpha/beta pre-release roadmap
 rather than plain SemVer feature/patch categories.
 
+## [1.0.0b2] - 2026-09-23 - Prototype extension
+
+Extends the prototype catalog after the `1.0.0a8` freeze. It does not reopen RFP-001 through RFP-007.
+
+### Added
+- `_NULLABLE_FIELDS` on `TableObject` and `NodeObject` so declared optional strings round-trip `None` through the HDF5 empty-string sentinel (RFP-008, #20). Undeclared fields keep the `1.0.0b1` behavior.
+- `H5Repository.file_exists()`. `TableRepository` and `NodeRepository` reads return their empty result without creating a missing `.h5` file (RFP-009, #19). Raw `H5Client` `'r'` / `'r+'` still raises `H5_FILE_NOT_FOUND`.
+
+### Changed
+- Mapper bases moved from `tiferet_h5/mappers/settings.py` to `tiferet_h5/mappers/core.py`.
+
 ## [1.0.0b1] - 2026-09-03 - Release Candidate
 
 ### Added
