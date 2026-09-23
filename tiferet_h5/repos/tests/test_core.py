@@ -14,7 +14,7 @@ from pydantic import AliasChoices, Field
 # ** app
 from tiferet.interfaces import ServiceError
 
-from ...mappers.settings import NodeObject, TableObject
+from ...mappers.core import NodeObject, TableObject
 from ...utils.h5 import H5_FILE_NOT_FOUND_ID, H5Client
 from ..core import NodeRepository, TableRepository
 from ..h5 import H5Repository
