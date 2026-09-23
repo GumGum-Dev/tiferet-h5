@@ -400,7 +400,6 @@ def test_two_mixin_repositories_share_one_file(h5_file: str) -> None:
     assert len(items) == 1
     assert items[0].name == 'Bolt'
 
-
 # ** test: file_exists_false_does_not_create_file
 def test_file_exists_false_does_not_create_file(h5_file: str) -> None:
     '''
@@ -410,7 +409,6 @@ def test_file_exists_false_does_not_create_file(h5_file: str) -> None:
 
     assert repo.file_exists() is False
     assert Path(h5_file).exists() is False
-
 
 # ** test: file_exists_true_when_path_exists
 def test_file_exists_true_when_path_exists(h5_file: str) -> None:
@@ -422,7 +420,6 @@ def test_file_exists_true_when_path_exists(h5_file: str) -> None:
 
     assert repo.file_exists() is True
     assert Path(h5_file).stat().st_size == 0
-
 
 # ** test: table_reads_missing_file_do_not_create
 def test_table_reads_missing_file_do_not_create(widget_repo: WidgetRepository, monkeypatch: pytest.MonkeyPatch) -> None:
@@ -442,7 +439,6 @@ def test_table_reads_missing_file_do_not_create(widget_repo: WidgetRepository, m
     assert list(widget_repo.iter_list(catalog='hardware')) == []
     assert Path(widget_repo.h5_file).exists() is False
 
-
 # ** test: table_save_creates_file_after_missing_read
 def test_table_save_creates_file_after_missing_read(widget_repo: WidgetRepository) -> None:
     '''
@@ -458,7 +454,6 @@ def test_table_save_creates_file_after_missing_read(widget_repo: WidgetRepositor
     result = widget_repo.get('name == b"Bolt"', catalog='hardware')
     assert result is not None
     assert result.name == 'Bolt'
-
 
 # ** test: node_reads_missing_file_do_not_create
 def test_node_reads_missing_file_do_not_create(widget_meta_repo: WidgetMetaRepository, monkeypatch: pytest.MonkeyPatch) -> None:
@@ -476,7 +471,6 @@ def test_node_reads_missing_file_do_not_create(widget_meta_repo: WidgetMetaRepos
     assert widget_meta_repo.exists() is False
     assert Path(widget_meta_repo.h5_file).exists() is False
 
-
 # ** test: node_save_creates_file_after_missing_read
 def test_node_save_creates_file_after_missing_read(widget_meta_repo: WidgetMetaRepository) -> None:
     '''
@@ -492,7 +486,6 @@ def test_node_save_creates_file_after_missing_read(widget_meta_repo: WidgetMetaR
     result = widget_meta_repo.get()
     assert result is not None
     assert result.catalog_name == 'Hardware'
-
 
 # ** test: client_read_modes_missing_file_still_raise
 @pytest.mark.parametrize('mode', ['r', 'r+'])
