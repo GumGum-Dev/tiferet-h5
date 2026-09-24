@@ -163,3 +163,12 @@ def test_h5_node_types(node_type: str) -> None:
     node = H5Node(path='/some/path', node_type=node_type)
 
     assert node.node_type == node_type
+
+
+# ** test: h5_column_name_coerces_to_string
+def test_h5_column_name_coerces_to_string() -> None:
+    col = H5Column(name=1, dtype='string')
+    assert col.name == '1'
+    
+
+    
